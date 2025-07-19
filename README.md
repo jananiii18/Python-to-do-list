@@ -6,4 +6,48 @@ View tasks
 Add task
 Delete task
 Exit 
-It Runs continuously until the user enters the number of exit.
+
+
+Sample output for each case
+To-do-list
+Enter 1 to view tasks
+Enter 2 to add task
+Enter 3 to remove task
+Enter 4 to exit
+Choose an option from 1-4: 1
+
+If the task list is empty,
+it displays "Its empty"
+
+If the task list has items,it displays output as following 
+1.Buy groceries
+2.Call mom
+3.Finish project
+
+To-do-list
+Enter 1 to view tasks
+Enter 2 to add task
+Enter 3 to remove task
+Enter 4 to exit
+Choose an option from 1-4: 2
+Enter the task: Read a book
+Your task added successfully
+
+To-do-list
+Enter 1 to view tasks
+Enter 2 to add task
+Enter 3 to remove task
+Enter 4 to exit
+Choose an option from 1-4: 3
+Enter task number to remove: 2
+1.Buy groceries
+2.Finish project
+3.Read a book
+
+To-do-list
+Enter 1 to view tasks
+Enter 2 to add task
+Enter 3 to remove task
+Enter 4 to exit
+Choose an option from 1-4: 4
+Okay bye!
