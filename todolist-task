@@ -1,0 +1,53 @@
+tasks_list = "todolist.txt"
+tasks = []
+
+def read_task():
+    try:
+        with open(tasks_list,"r") as r:
+            return [line.strip() for line in r.readlines()]
+    except FileNotFoundError:
+        return [] 
+        
+def write_task():
+    with open(tasks_list,"w") as f:
+        for task in tasks:
+            f.write(task + "\n")
+
+def todolist():
+    print("To-do-list")
+    print("Enter 1 to view your tasks")
+    print("Enter 2 to add any more task")
+    print("Enter 3 to remove one of the task")
+    print("Enter 4 to exit")
+    
+def main():
+    while True:
+        global tasks
+        tasks = read_task()
+        todolist()
+        user_input = input("Choose an option from 1-4: ")
+        if user_input == '1':
+            if not tasks:
+                print("Its empty")
+            else:
+                for i, j in enumerate(tasks,1):
+                    print(f"{i}.{j}")
+        elif user_input == '2':
+            user_input1 = input("Enter the task: ")
+            tasks.append(user_input1)
+            print("Your task added successfully")
+            write_task()
+        elif user_input == '3':
+            if not tasks:
+                print("There is no tasks to remove")
+            elif tasks:
+                user_remove = int(input("Enter task number to remove:"))
+                if 1 <= user_remove <= len(tasks):
+                    tasks.pop(user_remove - 1)
+        elif user_input == '4':
+            print("Okay bye!")
+            break
+    else:
+        print("Please enter valid number: ")
+       
+main() 
